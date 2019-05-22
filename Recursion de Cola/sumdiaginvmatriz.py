@@ -18,11 +18,11 @@ class Suma (object):
         if pfila==len(matriz):
           return result
         else:
-          return self.sumdiagmaux(matriz,pfila+1,result+matriz[pfila][-(pfila+1)])
+          return self.sumdiagmaux(matriz,pfila+1,result+matriz[-(pfila+1)][pfila])
 
 
 m = Suma()
 matriz = [[1,2,3],
           [4,5,6],
-          [7,8,9]]
+          [10,8,9]]
 print(m.sumdiagmatriz(matriz))
